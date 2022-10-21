@@ -2,7 +2,9 @@
 
 namespace App\Billing;
 
-class PaymentGateway
+use App\Billing\Contract\Gateway;
+
+class PaymentGateway implements Gateway
 {
     public function create()
     {
