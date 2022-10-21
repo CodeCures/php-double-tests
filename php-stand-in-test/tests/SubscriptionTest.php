@@ -2,11 +2,10 @@
 
 namespace Tests;
 
-use App\Billing\PaymentGateway;
 use App\Models\User;
 use App\Subscription;
 use PHPUnit\Framework\TestCase;
-
+use Test\FakePaymentGateway;
 
 class SubscriptionTest extends TestCase
 {
@@ -21,7 +20,7 @@ class SubscriptionTest extends TestCase
     {
         $user = new User();
 
-        $subscription = new Subscription(new PaymentGateway);
+        $subscription = new Subscription(new FakePaymentGateway);
 
         $subscription->create($user);
 
