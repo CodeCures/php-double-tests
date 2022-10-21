@@ -1,17 +1,19 @@
 <?php
 
-namespace Test;
-
-class SubscriptionTest
-{
-    // 
-}
-
 namespace Tests;
 
-use Tests\TestCase;
+use PHPUnit\Framework\TestCase;
 
-class SubscriptionTest extends TestCase
+/**
+ * SubScriptonTest
+ * @group group
+ */
+class SubScriptonTest extends TestCase
 {
-    // 
+    /** @test */
+    public function test_function()
+    {
+        $this->markTestSkipped("we will come back top this ASAP");
+    }
+
 }

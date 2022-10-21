@@ -1,0 +1,23 @@
+{
+    "name": "codesgate/php-stand-in-test",
+    "description": "Stand in test in php",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "courage",
+            "email": "couragesblog@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
