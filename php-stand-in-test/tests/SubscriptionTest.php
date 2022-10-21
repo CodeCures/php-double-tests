@@ -22,6 +22,8 @@ class SubscriptionTest extends TestCase
 
         $subscription = new Subscription(new FakePaymentGateway);
 
+        $this->assertFalse($user->isSubscribed());
+
         $subscription->create($user);
 
         $this->assertTrue($user->isSubscribed());
