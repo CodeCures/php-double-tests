@@ -2,7 +2,9 @@
 
 namespace Test;
 
-class FakePaymentGateway
+use App\Billing\Contract\Gateway;
+
+class FakePaymentGateway implements Gateway
 {
     public function create()
     {
