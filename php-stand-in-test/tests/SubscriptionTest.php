@@ -2,6 +2,7 @@
 
 namespace Tests;
 
+use App\Billing\Contract\Gateway;
 use App\Models\User;
 use App\Subscription;
 use PHPUnit\Framework\TestCase;
@@ -19,8 +20,7 @@ class SubscriptionTest extends TestCase
     public function creating_a_subscription_marks_user_as_subscribed()
     {
         $user = new User();
-
-        $subscription = new Subscription(new FakePaymentGateway);
+        $subscription = new Subscription($this->createMock(Gateway::class));
 
         $this->assertFalse($user->isSubscribed());
 
