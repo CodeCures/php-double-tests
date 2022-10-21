@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Billing\Contract\Gateway;
 use App\Billing\PaymentGateway;
 use App\Models\User;
 
